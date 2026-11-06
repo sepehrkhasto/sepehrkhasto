@@ -1,22 +1,22 @@
-<img src="assets/banner.png" alt="Sepehr Khastoo, Backend Engineer. Python and Django, application security, data integrity." width="100%">
+<img src="assets/banner.png" alt="Sepehr Khastoo, Junior Backend Developer. Python and Django, application security, data integrity." width="100%">
 
-Backend engineer working in Python and Django, mostly on application security and data integrity. Computer engineering student in Tehran, open to backend roles and internships, remote or on-site.
+Junior backend developer working in Python and Django, with a focus on application security and data integrity. Computer engineering student in Tehran, open to junior backend roles and internships, remote or on-site.
 
-[Portfolio](https://sepehrkhasto.github.io) · [فارسی](https://sepehrkhasto.github.io/fa/) · [LinkedIn](https://linkedin.com/in/sepehrkhasto) · [Email](mailto:sepehrkhasto.private@gmail.com)
+[Portfolio](https://sepehrkhasto.github.io) · [فارسی](https://sepehrkhasto.github.io/fa/) · [Resume (PDF)](https://sepehrkhasto.github.io/resume/Sepehr_Khastoo_Resume_EN.pdf) · [LinkedIn](https://linkedin.com/in/sepehrkhasto) · [Email](mailto:sepehrkhasto.private@gmail.com)
 
 ## Projects
 
 **[Aegis Planner, web](https://github.com/sepehrkhasto/aegis-zk-planner)** · Django, Web Crypto API · v7.1.0  
-A zero-knowledge planner. The vault is encrypted in the browser with AES-256-GCM under a random data key, and that key is wrapped with a PBKDF2-SHA256 key derived from the password, so the server stores only the salt, the wrapped key and the ciphertext. Revision-checked saves, a strict CSP, Argon2, rate limiting and lockout. 146 Django tests and 556 JavaScript checks run in GitHub Actions.
+A zero-knowledge planner: the server only ever stores ciphertext. In the browser, PBKDF2-SHA256 with 600,000 iterations turns the master password into a key that wraps a random data key, and the data key encrypts the vault with AES-256-GCM. Saves carry a revision number, so a stale write from a second device gets HTTP 409 instead of overwriting newer data. Strict CSP, Argon2, rate limiting and lockout. 146 Django tests and 556 JavaScript checks run in GitHub Actions.
 
 **[Aegis Planner, desktop](https://github.com/sepehrkhasto/aegis-planner)** · Python, PyQt6 · v2.11.10  
-An offline, encrypted planner for Windows, in Persian with a Jalali calendar. Atomic writes, encrypted backups, and installers built from tagged source with published SHA-256 checksums. 971 pytest tests.
+An offline, encrypted planner for Windows, in Persian with a Jalali calendar. Crash-safe atomic writes, encrypted backups with verify and restore, and installers built from tagged source with published SHA-256 checksums. 971 pytest tests.
 
-**[Refinery Risk Monitor](https://github.com/sepehrkhasto/refinery-risk-monitor)** · FastAPI, SQLAlchemy, WebSocket  
-Live risk scoring, P10/P50/P90 forecasts and anomaly detection for refinery process units, with JWT role-based access and a live simulator with fault injection. I led the four-person team; the project placed in the top three of the course.
+**[Refinery Risk Monitor](https://github.com/sepehrkhasto/refinery-risk-monitor)** · FastAPI, SQLAlchemy, WebSocket · team of four  
+Live risk scoring, P10/P50/P90 forecasts and anomaly detection for refinery process units. I led the project and set the architecture and the ML pipeline design; I directed the backend, which I built with AI coding tools and reviewed: JWT role-based access per endpoint, and a service that refuses to start in production with a default key or open CORS. Placed in the top three of the course.
 
 **[Andarun](https://github.com/sepehrkhasto/andarun)** · Django · in development  
-An invite-only, text-only social network designed to keep working through internet shutdowns. So far: a custom user model with username login, strict usernames and settings that fail closed. Next: invite-only sign-up, approved by the member who sent the invitation.
+A text-only, invite-only social network designed to run on a domestic network when international internet access is cut, so it has no email and no outside services. So far: a custom user model with username login, strict usernames, and settings that fail closed. Next: invite-only sign-up, approved by the member who sent the invitation.
 
 ## Currently
 
@@ -24,7 +24,8 @@ Building Andarun v1, starting with accounts and invitations, and learning Django
 
 ## Stack
 
-**Core:** Python, Django, SQL, PostgreSQL, MySQL, SQLite, Git  
-**Working knowledge:** Docker, Linux, ORM query optimization, transactions and row-level locking, networking fundamentals  
+**Core:** Python, SQL, Django, PostgreSQL, MySQL, SQLite, Git and GitHub  
+**Working knowledge:** class-based views, authentication and permissions, ORM query optimization, transactions and row-level locking, testing with Django TestCase, Docker, Linux, networking fundamentals  
 **Also used:** FastAPI, SQLAlchemy, Alembic, WebSocket, Web Crypto API, PyQt6, GitHub Actions  
-**Learning:** Django REST Framework, testing with Django TestCase
+**Learning:** Django REST Framework  
+**Languages:** Persian (native), English (B1)
